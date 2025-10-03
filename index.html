@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Crepe da Mara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .pacifico-font {
+            font-family: 'Pacifico', cursive;
+        }
+        /* Estilo customizado para o checkbox selecionado */
+        input[type="checkbox"]:checked {
+            background-color: #f59e0b;
+            border-color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+
+    <div class="container mx-auto max-w-2xl p-4 sm:p-6 md:p-8">
+        
+        <!-- Cabeçalho -->
+        <header class="text-center mb-8">
+            <h1 class="text-5xl md:text-6xl text-amber-600 pacifico-font">Crepe da Mara</h1>
+            <p class="text-gray-600 mt-2 text-lg">Escolha os sabores e monte seu pedido!</p>
+        </header>
+
+        <main id="order-form" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 space-y-8">
+            
+            <!-- Seção de Sabores -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-amber-200 pb-2 mb-4">1. Sabores de Crepe</h2>
+                <div id="menu-items" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Card de Sabor -->
+                    <div class="menu-card bg-white rounded-lg shadow p-4 flex flex-col items-start space-y-2 border" data-name="Queijo e Presunto" data-price="13.00">
+                        <h3 class="font-bold text-lg text-gray-800">Queijo e Presunto</h3>
+                        <p class="text-gray-600 flex-grow">O clássico que todo mundo ama.</p>
+                        <div class="w-full flex justify-between items-center pt-2">
+                            <span class="font-bold text-amber-600 text-lg">R$ 13,00</span>
+                            <button class="add-to-cart-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Adicionar</button>
+                        </div>
+                    </div>
+                     <!-- Card de Sabor -->
+                    <div class="menu-card bg-white rounded-lg shadow p-4 flex flex-col items-start space-y-2 border" data-name="Queijo e Goiabada" data-price="13.00">
+                        <h3 class="font-bold text-lg text-gray-800">Queijo e Goiabada</h3>
+                        <p class="text-gray-600 flex-grow">A combinação perfeita de doce e salgado.</p>
+                         <div class="w-full flex justify-between items-center pt-2">
+                            <span class="font-bold text-amber-600 text-lg">R$ 13,00</span>
+                            <button class="add-to-cart-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Adicionar</button>
+                        </div>
+                    </div>
+                    <!-- Card de Sabor -->
+                    <div class="menu-card bg-white rounded-lg shadow p-4 flex flex-col items-start space-y-2 border" data-name="Queijo e Chocolate" data-price="13.00">
+                        <h3 class="font-bold text-lg text-gray-800">Queijo e Chocolate</h3>
+                        <p class="text-gray-600 flex-grow">Uma sobremesa deliciosa e quentinha.</p>
+                         <div class="w-full flex justify-between items-center pt-2">
+                            <span class="font-bold text-amber-600 text-lg">R$ 13,00</span>
+                            <button class="add-to-cart-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Adicionar</button>
+                        </div>
+                    </div>
+                    <!-- Card de Sabor -->
+                    <div class="menu-card bg-white rounded-lg shadow p-4 flex flex-col items-start space-y-2 border" data-name="Queijo e Calabresa" data-price="15.00">
+                        <h3 class="font-bold text-lg text-gray-800">Queijo e Calabresa</h3>
+                        <p class="text-gray-600 flex-grow">Sabor marcante e irresistível.</p>
+                         <div class="w-full flex justify-between items-center pt-2">
+                            <span class="font-bold text-amber-600 text-lg">R$ 15,00</span>
+                            <button class="add-to-cart-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Adicionar</button>
+                        </div>
+                    </div>
+                    <!-- Card de Sabor -->
+                    <div class="menu-card bg-white rounded-lg shadow p-4 flex flex-col items-start space-y-2 border" data-name="Queijo e Frango" data-price="15.00">
+                        <h3 class="font-bold text-lg text-gray-800">Queijo e Frango</h3>
+                        <p class="text-gray-600 flex-grow">Cremoso e cheio de sabor.</p>
+                         <div class="w-full flex justify-between items-center pt-2">
+                            <span class="font-bold text-amber-600 text-lg">R$ 15,00</span>
+                            <button class="add-to-cart-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Adicionar</button>
+                        </div>
+                    </div>
+                    <!-- Card de Sabor -->
+                    <div class="menu-card bg-white rounded-lg shadow p-4 flex flex-col items-start space-y-2 border" data-name="Queijo e Carne" data-price="15.00">
+                        <h3 class="font-bold text-lg text-gray-800">Queijo e Carne</h3>
+                        <p class="text-gray-600 flex-grow">Para quem gosta de um recheio potente.</p>
+                         <div class="w-full flex justify-between items-center pt-2">
+                            <span class="font-bold text-amber-600 text-lg">R$ 15,00</span>
+                            <button class="add-to-cart-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção do Carrinho -->
+            <section id="cart-section" class="pt-6 border-t-2 border-dashed border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">2. Meu Pedido</h2>
+                <div id="cart-items" class="space-y-3">
+                    <p id="empty-cart-msg" class="text-gray-500">Seu pedido está vazio.</p>
+                </div>
+            </section>
+
+
+            <!-- Seção de Adicionais -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-amber-200 pb-2 mb-4">3. Adicionais (para o pedido todo)</h2>
+                <div class="space-y-3">
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="checkbox" id="adicional-milho" name="adicional" value="Milho" class="h-5 w-5 rounded border-gray-300 text-amber-600 focus:ring-amber-500">
+                        <span class="text-gray-700">Milho</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="checkbox" id="adicional-tomate" name="adicional" value="Tomate" class="h-5 w-5 rounded border-gray-300 text-amber-600 focus:ring-amber-500">
+                        <span class="text-gray-700">Tomate</span>
+                    </label>
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="checkbox" id="adicional-nenhum" name="adicional" value="Nenhum" class="h-5 w-5 rounded border-gray-300 text-amber-600 focus:ring-amber-500">
+                        <span class="text-gray-700">Não quero adicionais</span>
+                    </label>
+                </div>
+            </section>
+            
+            <!-- Seção de Opções -->
+            <section>
+                 <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-amber-200 pb-2 mb-4">4. Opções</h2>
+                 <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" id="para-viagem" class="h-5 w-5 rounded border-gray-300 text-amber-600 focus:ring-amber-500">
+                    <span class="text-gray-700">É para viagem?</span>
+                </label>
+            </section>
+
+            <!-- Seção de Finalização -->
+            <section class="border-t-2 border-dashed border-gray-200 pt-6">
+                <div class="flex flex-col sm:flex-row justify-between items-center bg-amber-50 rounded-lg p-4 gap-4">
+                    <div class="text-lg font-bold text-gray-800">
+                        <span>Total: </span>
+                        <span id="total-price" class="text-amber-600 text-2xl">R$ 0,00</span>
+                    </div>
+                    <button id="send-order" class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg shadow-md transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:scale-100" disabled>
+                        Enviar Pedido via WhatsApp
+                    </button>
+                </div>
+                 <div id="error-message" class="text-red-500 mt-4 text-center font-semibold"></div>
+            </section>
+
+        </main>
+        
+        <footer class="text-center mt-8">
+            <p class="text-gray-500">Desenvolvido com ❤️ para Crepe da Mara</p>
+        </footer>
+    </div>
+
+    <!-- Modal de Quantidade -->
+    <div id="quantity-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-sm transform transition-all" role="dialog" aria-modal="true">
+            <h3 id="modal-title" class="text-xl font-bold text-gray-800 mb-4">Defina a Quantidade</h3>
+            <div class="mb-4">
+                <label for="modal-quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantidade</label>
+                <input type="number" id="modal-quantity" name="quantity" value="1" min="1" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-amber-500 focus:border-amber-500 text-center text-lg p-2">
+            </div>
+            <div class="flex justify-end gap-3">
+                <button id="modal-cancel" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg">Cancelar</button>
+                <button id="modal-confirm" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // --- CONFIGURAÇÃO ---
+        const whatsappNumber = "5568992481275"; 
+
+        // --- ESTADO DO APLICATIVO ---
+        let cart = [];
+
+        // --- ELEMENTOS DO DOM ---
+        const menuItemsContainer = document.getElementById('menu-items');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const emptyCartMsg = document.getElementById('empty-cart-msg');
+        const totalPriceEl = document.getElementById('total-price');
+        const sendOrderBtn = document.getElementById('send-order');
+        const errorMessageEl = document.getElementById('error-message');
+        const milhoCheckbox = document.getElementById('adicional-milho');
+        const tomateCheckbox = document.getElementById('adicional-tomate');
+        const nenhumCheckbox = document.getElementById('adicional-nenhum');
+        // Modal
+        const quantityModal = document.getElementById('quantity-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalQuantityInput = document.getElementById('modal-quantity');
+        const modalConfirmBtn = document.getElementById('modal-confirm');
+        const modalCancelBtn = document.getElementById('modal-cancel');
+
+
+        // --- FUNÇÕES ---
+
+        function renderCart() {
+            cartItemsContainer.innerHTML = ''; 
+            if (cart.length === 0) {
+                cartItemsContainer.appendChild(emptyCartMsg);
+                emptyCartMsg.style.display = 'block';
+            } else {
+                emptyCartMsg.style.display = 'none';
+                cart.forEach((item, index) => {
+                    const cartItemEl = document.createElement('div');
+                    cartItemEl.className = 'flex justify-between items-center bg-gray-50 p-2 rounded-lg';
+                    cartItemEl.innerHTML = `
+                        <div>
+                            <p class="font-semibold text-gray-800">${item.name}</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button class="quantity-btn minus-btn bg-gray-200 text-gray-700 rounded-full w-7 h-7 font-bold text-lg flex items-center justify-center" data-index="${index}">-</button>
+                            <span class="font-bold text-lg w-6 text-center">${item.quantity}</span>
+                            <button class="quantity-btn plus-btn bg-gray-200 text-gray-700 rounded-full w-7 h-7 font-bold text-lg flex items-center justify-center" data-index="${index}">+</button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(cartItemEl);
+                });
+            }
+            updateTotalPrice();
+        }
+
+        function updateTotalPrice() {
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            totalPriceEl.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+            sendOrderBtn.disabled = total <= 0;
+        }
+
+        function openQuantityModal(name, price) {
+            modalTitle.textContent = `Quantos crepes de "${name}"?`;
+            modalQuantityInput.value = '1';
+            // Armazena os dados do item no próprio botão de confirmação para fácil acesso
+            modalConfirmBtn.dataset.name = name;
+            modalConfirmBtn.dataset.price = price;
+            quantityModal.classList.remove('hidden');
+        }
+
+        function closeQuantityModal() {
+            quantityModal.classList.add('hidden');
+        }
+        
+        function handleConfirmQuantity() {
+            const name = modalConfirmBtn.dataset.name;
+            const price = parseFloat(modalConfirmBtn.dataset.price);
+            const quantity = parseInt(modalQuantityInput.value);
+
+            if (isNaN(quantity) || quantity < 1) {
+                return; // Impede adicionar quantidade inválida
+            }
+
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ name, price, quantity });
+            }
+
+            renderCart();
+            closeQuantityModal();
+        }
+
+
+        function handleCartQuantity(event) {
+            const button = event.target.closest('.quantity-btn');
+            if (!button) return;
+
+            const index = parseInt(button.dataset.index);
+            const item = cart[index];
+
+            if (button.classList.contains('plus-btn')) {
+                item.quantity++;
+            } else if (button.classList.contains('minus-btn')) {
+                item.quantity--;
+                if (item.quantity === 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            renderCart();
+        }
+
+        function handleAdicionais(event) {
+            const clickedCheckbox = event.target;
+            
+            if (clickedCheckbox === nenhumCheckbox && clickedCheckbox.checked) {
+                milhoCheckbox.checked = false;
+                tomateCheckbox.checked = false;
+                milhoCheckbox.disabled = true;
+                tomateCheckbox.disabled = true;
+            } else if (clickedCheckbox !== nenhumCheckbox && clickedCheckbox.checked) {
+                nenhumCheckbox.checked = false;
+            }
+
+            if (!nenhumCheckbox.checked) {
+                milhoCheckbox.disabled = false;
+                tomateCheckbox.disabled = false;
+            }
+        }
+
+        function sendOrder() {
+             if (cart.length === 0) {
+                errorMessageEl.textContent = 'Seu pedido está vazio. Adicione um crepe para continuar.';
+                return;
+            }
+
+            let itemsMessage = cart.map(item => `- ${item.quantity}x ${item.name}`).join('\n');
+            const adicionais = Array.from(document.querySelectorAll('input[name="adicional"]:checked')).map(el => `- ${el.value}`).join('\n');
+            const paraViagem = document.getElementById('para-viagem').checked;
+            const observacao = paraViagem ? "Para Viagem" : "Consumir no Local";
+
+            let message = `Olá, *Crepe da Mara*! Gostaria de fazer um pedido:\n\n`;
+            message += `*ITENS DO PEDIDO:*\n${itemsMessage}\n\n`;
+            
+            if (adicionais && !nenhumCheckbox.checked) {
+                message += `*ADICIONAIS:*\n${adicionais}\n\n`;
+            } else {
+                 message += `*ADICIONAIS:*\n- Nenhum\n\n`;
+            }
+
+            message += `*OBSERVAÇÃO:*\n- ${observacao}\n\n`;
+            message += `*TOTAL:* ${totalPriceEl.textContent}`;
+
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // --- EVENT LISTENERS ---
+        menuItemsContainer.addEventListener('click', (event) => {
+            const button = event.target.closest('.add-to-cart-btn');
+            if (!button) return;
+            const card = button.closest('.menu-card');
+            openQuantityModal(card.dataset.name, card.dataset.price);
+        });
+        
+        cartItemsContainer.addEventListener('click', handleCartQuantity);
+        sendOrderBtn.addEventListener('click', sendOrder);
+        
+        milhoCheckbox.addEventListener('change', handleAdicionais);
+        tomateCheckbox.addEventListener('change', handleAdicionais);
+        nenhumCheckbox.addEventListener('change', handleAdicionais);
+        
+        // Listeners do Modal
+        modalConfirmBtn.addEventListener('click', handleConfirmQuantity);
+        modalCancelBtn.addEventListener('click', closeQuantityModal);
+        quantityModal.addEventListener('click', (event) => {
+            if (event.target === quantityModal) closeQuantityModal(); // Fecha se clicar no fundo
+        });
+
+
+        // --- INICIALIZAÇÃO ---
+        renderCart();
+
+    </script>
+</body>
+</html>
+
