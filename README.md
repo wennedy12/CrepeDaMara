@@ -54,7 +54,7 @@ Um cardápio digital interativo e responsivo para a lanchonete Crepe da Mara, de
 
 3. **Configure o WhatsApp** (opcional):
    - Edite a variável `whatsappNumber` no JavaScript
-   - Formato: "5568992481275" (código do país + DDD + número)
+   - Formato: "5568999999999" (código do país + DDD + número)
 
 ## 📋 Estrutura do Projeto
 
@@ -122,5 +122,6 @@ Para dúvidas ou sugestões sobre o projeto:
 Este projeto foi desenvolvido para uso comercial da lanchonete Crepe da Mara.
 
 ---
+
 
 **Desenvolvido com ❤️ para Crepe da Mara**
