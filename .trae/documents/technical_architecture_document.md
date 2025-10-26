@@ -24,41 +24,49 @@ graph TD
 
 ## 2. Descrição das Tecnologias
 
-- **Frontend**: HTML5 + JavaScript ES6+ + Tailwind CSS via CDN
-- **Backend**: Nenhum (aplicação client-side)
-- **Integração**: WhatsApp Web API para pedidos
-- **Monetização**: Google AdSense
-- **Fontes**: Google Fonts (Inter + Pacifico)
+* **Frontend**: HTML5 + JavaScript ES6+ + Tailwind CSS via CDN
+
+* **Backend**: Nenhum (aplicação client-side)
+
+* **Integração**: WhatsApp Web API para pedidos
+
+* **Monetização**: Google AdSense
+
+* **Fontes**: Google Fonts (Inter + Pacifico)
 
 ## 3. Definições de Rotas
 
-| Rota | Propósito |
-|------|-----------|
-| /index.html | Página principal do cardápio, exibe menu interativo e carrinho |
-| /privacy-policy.html | Política de privacidade, informações sobre LGPD e cookies |
-| /terms-of-use.html | Termos de uso, responsabilidades e limitações do serviço |
+| Rota                 | Propósito                                                      |
+| -------------------- | -------------------------------------------------------------- |
+| /index.html          | Página principal do cardápio, exibe menu interativo e carrinho |
+| /privacy-policy.html | Política de privacidade, informações sobre LGPD e cookies      |
+| /terms-of-use.html   | Termos de uso, responsabilidades e limitações do serviço       |
 
 ## 4. Definições de API
 
 ### 4.1 API Principal
 
 Integração com WhatsApp Web
+
 ```
 GET https://wa.me/{whatsappNumber}?text={encodedMessage}
 ```
 
 Parâmetros:
-| Nome do Parâmetro | Tipo | Obrigatório | Descrição |
-|-------------------|------|-------------|-----------|
-| whatsappNumber | string | true | Número do WhatsApp no formato internacional |
-| text | string | true | Mensagem do pedido codificada em URL |
+
+| Nome do Parâmetro | Tipo   | Obrigatório | Descrição                                   |
+| ----------------- | ------ | ----------- | ------------------------------------------- |
+| whatsappNumber    | string | true        | Número do WhatsApp no formato internacional |
+| text              | string | true        | Mensagem do pedido codificada em URL        |
 
 Resposta:
-| Nome do Parâmetro | Tipo | Descrição |
-|-------------------|------|-----------|
-| redirect | boolean | Redirecionamento para aplicativo WhatsApp |
+
+| Nome do Parâmetro | Tipo    | Descrição                                 |
+| ----------------- | ------- | ----------------------------------------- |
+| redirect          | boolean | Redirecionamento para aplicativo WhatsApp |
 
 Exemplo de mensagem formatada:
+
 ```json
 {
   "message": "Olá, *Crepe da Mara*! Gostaria de fazer um pedido:\n\n*ITENS DO PEDIDO:*\n- 2x Queijo e Presunto\n- 1x Queijo e Chocolate\n\n*ADICIONAIS:*\n- Milho\n\n*OBSERVAÇÃO:*\n- Para Viagem\n\n*TOTAL:* R$ 39,00"
@@ -68,16 +76,19 @@ Exemplo de mensagem formatada:
 ### 4.2 APIs de Terceiros
 
 Google AdSense
+
 ```
 GET https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
 ```
 
 Google Fonts
+
 ```
 GET https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico
 ```
 
 Tailwind CSS
+
 ```
 GET https://cdn.tailwindcss.com
 ```
@@ -137,6 +148,7 @@ erDiagram
 ### 6.2 Estruturas de Dados JavaScript
 
 Estrutura do Item do Carrinho
+
 ```javascript
 // Estrutura do item no carrinho
 const cartItem = {
@@ -174,6 +186,7 @@ const orderConfig = {
 ```
 
 Estrutura do Item do Menu
+
 ```javascript
 // Definição dos itens do menu
 const menuItems = [
@@ -193,6 +206,7 @@ const menuItems = [
 ```
 
 Funções Principais
+
 ```javascript
 // Função para adicionar item ao carrinho
 function addToCart(name, price, quantity) {
@@ -220,3 +234,4 @@ function formatWhatsAppMessage() {
     return `Olá, *Crepe da Mara*! Gostaria de fazer um pedido:\n\n*ITENS DO PEDIDO:*\n${itemsMessage}\n\n*TOTAL:* R$ ${total.toFixed(2).replace('.', ',')}`;
 }
 ```
+
