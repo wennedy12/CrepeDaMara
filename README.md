@@ -25,7 +25,7 @@ Um cardápio digital interativo e responsivo para a lanchonete Crepe da Mara, de
 ### Clássicos (R$ 13,00)
 - Queijo e Presunto
 - Queijo e Goiabada  
-- Queijo e Chocolate
+- Chocolate
 
 ### Premium (R$ 15,00)
 - Queijo e Calabresa
